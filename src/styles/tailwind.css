@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #fffde7; /* Clean canvas */
+    --color-surface: #F8F9FA; /* Subtle depth */
+    --color-card: #fde68a; /* Card background */
+    --color-card-foreground: #1A1A1A; /* Card text */
+    --color-popover: #FFFFFF; /* Popover background */
+    --color-popover-foreground: #1A1A1A; /* Popover text */
+    
+    /* Text Colors */
+    --color-foreground: #1A1A1A; /* Primary text */
+    --color-muted: #F8F9FA; /* Muted background */
+    --color-muted-foreground: #6B7280; /* Secondary text */
+    
+    /* Brand Colors */
+    --color-primary: #2E5266; /* Deep navy */
+    --color-primary-foreground: #FFFFFF; /* White */
+    --color-secondary: #40A0A0; /* Sophisticated teal */
+    --color-secondary-foreground: #FFFFFF; /* White */
+    --color-accent: #C17817; /* Warm amber */
+    --color-accent-foreground: #FFFFFF; /* White */
+    
+    /* State Colors */
+    --color-success: #059669; /* Success green */
+    --color-success-foreground: #FFFFFF; /* White */
+    --color-warning: #D97706; /* Warning orange */
+    --color-warning-foreground: #FFFFFF; /* White */
+    --color-error: #DC2626; /* Error red */
+    --color-error-foreground: #FFFFFF; /* White */
+    --color-destructive: #DC2626; /* Destructive red */
+    --color-destructive-foreground: #FFFFFF; /* White */
+    
+    /* Form Elements */
+    --color-border: #E5E7EB; /* Border gray-200 */
+    --color-input: #FFFFFF; /* Input background */
+    --color-ring: #40A0A0; /* Focus ring teal */
+    
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .shadow-brand {
+    box-shadow: 0 4px 20px rgba(64, 160, 160, 0.08);
+  }
+  
+  .shadow-brand-lg {
+    box-shadow: 0 8px 40px rgba(64, 160, 160, 0.12);
+  }
+  
+  .shadow-cta {
+    box-shadow: 0 4px 12px rgba(46, 82, 102, 0.15);
+  }
+  
+  .border-brand {
+    border: 1px solid rgba(64, 160, 160, 0.15);
+  }
+  
+  .transition-brand {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .text-gradient-brand {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* New enhanced image animations */
+  .animate-slide-left {
+    animation: slideLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    animation: slideRight 0.8s ease-out forwards;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+  
+  .animate-rotate-in {
+    animation: rotateIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-200deg) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}

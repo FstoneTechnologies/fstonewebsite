@@ -2,7 +2,8 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
-import CareersHome from "pages/careers/components/CareersHome";
+import FstoneCareers from "pages/careers";
+
 
 const NotFound = lazy(() => import("pages/NotFound"));
 const ServicesShowcase = lazy(() => import('./pages/service'));
@@ -23,7 +24,7 @@ const Routes = () => {
           <Route path="/contact" element={<ContactConsultationPage />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/about" element={<AboutDaRYTE />} />
-          <Route path="/careers" element={<CareersHome />} />
+          <Route path="/careers" element={<FstoneCareers/>} />
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
       </Suspense>

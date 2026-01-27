@@ -3,6 +3,7 @@ import Header from '../../components/ui/Header';
 import Footer from '../../components/ui/Footer';
 import LazyLoad from '../../components/LazyLoad';
 import CareerHeroSection from './components/CareerHeroSection ';
+import CareerBenefitsSection from './components/CareerBenefitsSection';
 
 
 const FstoneCareers = () => {
@@ -14,7 +15,10 @@ const FstoneCareers = () => {
       <LazyLoad>
         <CareerHeroSection/>
       </LazyLoad>
-
+     {/* Benefits Section */}
+      <LazyLoad>
+        <CareerBenefitsSection/>
+      </LazyLoad>
       {/* Footer */}
       <Footer />
     </div>

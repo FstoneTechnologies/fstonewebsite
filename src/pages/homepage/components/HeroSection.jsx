@@ -96,19 +96,6 @@ const HeroSection = () => {
                 </Link>
               </div>
             </LazyLoad>
-
-            {/* Office Space Highlight */}
-            <LazyLoad delay={1200}>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl hover:bg-white/15 transition-all duration-500">
-                <div className="flex items-center justify-center space-x-4 mb-4">
-                  <Building2 size={24} className="text-teal-400" />
-                  <span className="text-lg font-semibold text-white">6000 Sq Ft Premium Office Space</span>
-                </div>
-                <p className="text-gray-200 mb-4">
-                  State-of-the-art incubation facility designed for startup success
-                </p>
-              </div>
-            </LazyLoad>
           </div>
         </LazyLoad>
       </div>

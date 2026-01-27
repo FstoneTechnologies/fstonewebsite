@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
-import FounderStory from './components/FounderStory';
-import TeamProfiles from './components/TeamProfiles';
+import FounderStory from './components/AboutOverview';
+import TeamProfiles from './components/ServiceLines';
 import CompanyCulture from './components/CompanyCulture';
-import ImpactMetrics from './components/ImpactMetrics';
-import PartnershipNetwork from './components/PartnershipNetwork';
-import OfficeSpaceTour from './components/OfficeSpaceTour';
-import ClientTestimonials from './components/ClientTestimonials';
+import ImpactMetrics from './components/LeadershipSection';
 import Icon from '../../components/AppIcon';
 import Footer from '../../components/ui/Footer';
 import LazyLoad from '../../components/LazyLoad';
+import AboutOverview from './components/AboutOverview';
+import ServiceLines from './components/ServiceLines';
+import LeadershipSection from './components/LeadershipSection';
 const AboutDaRYTE = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -21,11 +21,11 @@ const AboutDaRYTE = () => {
       </LazyLoad>
       {/* Founder Story */}
       <LazyLoad>
-        <FounderStory />
+        <AboutOverview />
       </LazyLoad>
-      {/* Team Profiles */}
+      {/* Service Lines */}
       <LazyLoad>
-        <TeamProfiles />
+        <ServiceLines />
       </LazyLoad>
       {/* Company Culture */}
       <LazyLoad>
@@ -33,20 +33,10 @@ const AboutDaRYTE = () => {
       </LazyLoad>
       {/* Impact Metrics */}
       <LazyLoad>
-        <ImpactMetrics />
+        <LeadershipSection/>
       </LazyLoad>
       {/* Partnership Network */}
-      <LazyLoad>
-        <PartnershipNetwork />
-      </LazyLoad>
-      {/* Office Space Tour */}
-      <LazyLoad>
-        <OfficeSpaceTour />
-      </LazyLoad>
-      {/* Client Testimonials */}
-      <LazyLoad>
-        <ClientTestimonials />
-      </LazyLoad>
+      
       {/* Footer */}
       <Footer />
     </div>

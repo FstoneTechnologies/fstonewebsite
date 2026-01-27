@@ -17,11 +17,7 @@ const OfficeLocation = () => {
   };
 
   const facilities = [
-    {
-      icon: 'Building',
-      title: '6000 Sq Ft Facility',
-      description: 'Modern workspace with state-of-the-art amenities'
-    },
+    
     {
       icon: 'Users',
       title: 'Meeting Rooms',
@@ -79,14 +75,7 @@ const OfficeLocation = () => {
   return (
     <section className="py-16 bg-yellow-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Visit Our Office
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Visit our Gurugram office to explore our modern workspace and connect with our team in person.
-          </p>
-        </div>
+        
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Map and Location Info */}
@@ -238,26 +227,7 @@ const OfficeLocation = () => {
                 ))}
               </div>
             </div>
-
-            {/* Virtual Tour CTA */}
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
-              <div className="text-center">
-                <Icon name="Play" size={48} className="mx-auto mb-4 text-white/80" />
-                <h3 className="text-2xl font-bold mb-3">Take a Virtual Tour</h3>
-                <p className="text-white/90 mb-6">
-                  Explore our 6000 sq ft facility from the comfort of your home. See our meeting rooms, workspaces, and amenities.
-                </p>
-                <Button
-                  variant="default"
-                  size="lg"
-                  iconName="Play"
-                  iconPosition="left"
-                  className="bg-white text-primary hover:bg-white/90"
-                >
-                  Start Virtual Tour
-                </Button>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

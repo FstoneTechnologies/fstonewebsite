@@ -77,7 +77,7 @@ const CompanyCulture = () => {
   ];
 
   return (
-    <section className="py-20 bg-yellow-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -108,115 +108,14 @@ const CompanyCulture = () => {
         </div>
 
         {/* Office Space Showcase */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-              Our 6000 Sq Ft Innovation Hub
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Thoughtfully designed spaces that foster creativity, collaboration, and growth
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {officeSpaces?.map((space, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-xl mb-4">
-                  <Image
-                    src={space?.image}
-                    alt={`${space?.name} at DaRYTE office`}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-brand"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-brand"></div>
-                  <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-brand">
-                    <Icon name="Eye" size={20} />
-                  </div>
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">{space?.name}</h4>
-                <p className="text-sm text-muted-foreground">{space?.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+       
 
         {/* Team Moments */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Life at Fstone
-              </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Beyond business success, we're building a community where innovation thrives, 
-                relationships matter, and every individual contributes to something meaningful.
-              </p>
-            </div>
-
-            {/* Culture Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-border">
-                <div className="text-2xl font-bold text-primary mb-1">95%</div>
-                <div className="text-sm text-muted-foreground">Team Satisfaction</div>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-border">
-                <div className="text-2xl font-bold text-secondary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Events Annually</div>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-border">
-                <div className="text-2xl font-bold text-accent mb-1">24/7</div>
-                <div className="text-sm text-muted-foreground">Support Available</div>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-border">
-                <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                <div className="text-sm text-muted-foreground">Ethical Standards</div>
-              </div>
-            </div>
-
-            {/* Core Principles */}
-            <div className="bg-white rounded-xl p-6 shadow-brand border border-border">
-              <h4 className="font-semibold text-foreground mb-4">Our Daily Principles</h4>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" size={16} className="text-accent" />
-                  <span className="text-sm text-muted-foreground">Every client interaction builds lasting trust</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" size={16} className="text-accent" />
-                  <span className="text-sm text-muted-foreground">Innovation is encouraged and celebrated</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" size={16} className="text-accent" />
-                  <span className="text-sm text-muted-foreground">Continuous learning and growth mindset</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" size={16} className="text-accent" />
-                  <span className="text-sm text-muted-foreground">Collaborative success over individual achievement</span>
-                </div>
-              </div>
-            </div>
-          </div>
+         
 
           {/* Team Moments Gallery */}
-          <div className="space-y-6">
-            {teamMoments?.map((moment, index) => (
-              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-brand border border-border hover:shadow-brand-lg transition-brand group">
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={moment?.image}
-                    alt={moment?.title}
-                    className="w-full h-40 object-cover group-hover:scale-105 transition-brand"
-                  />
-                  {moment?.image?.includes('IMG_') && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  )}
-                </div>
-                <div className="p-2">
-                  <h4 className="font-semibold text-foreground mb-2">{moment?.title}</h4>
-                  <p className="text-sm text-muted-foreground">{moment?.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+         
         </div>
       </div>
     </section>

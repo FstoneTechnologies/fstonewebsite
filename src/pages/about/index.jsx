@@ -6,7 +6,7 @@ import Footer from '../../components/ui/Footer';
 import LazyLoad from '../../components/LazyLoad';
 import AboutOverview from './components/AboutOverview';
 import ServiceLines from './components/ServiceLines';
-import LeadershipSection from './components/LeadershipSection';
+// import LeadershipSection from './components/LeadershipSection';
 const AboutDaRYTE = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -28,9 +28,9 @@ const AboutDaRYTE = () => {
         <CompanyCulture />
       </LazyLoad>
       {/* Impact Metrics */}
-      <LazyLoad>
+      {/* <LazyLoad>
         <LeadershipSection/>
-      </LazyLoad>
+      </LazyLoad> */}
       {/* Partnership Network */}
       
       {/* Footer */}

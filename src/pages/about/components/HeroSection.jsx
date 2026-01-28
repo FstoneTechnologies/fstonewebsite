@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../../../components/AppImage";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -45,33 +46,20 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div className="pt-6">
-            <button className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]">
+  <Link to="/contact">
+    <button className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]">
+      {/* ICON */}
+      <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+        →
+      </span>
 
-
-              {/* ICON */}
-              <span
-                className="
-        absolute left-4
-        w-9 h-9
-        rounded-full
-        bg-blue-400 text-black
-        flex items-center justify-center
-        transition-all duration-300
-        group-hover:left-[calc(100%-3rem)]
-      "
-              >
-                →
-              </span>
-
-              {/* TEXT */}
-              <span className="relative z-10 transition-all duration-300">
-                Request a Consultation
-              </span>
-
-            </button>
-          </div>
-
-
+      {/* TEXT */}
+      <span className="relative z-10 transition-all duration-300">
+        Reach Out to Us
+      </span>
+    </button>
+  </Link>
+</div>
 
         </div>
 

@@ -1,26 +1,94 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+
 import Header from '../../components/ui/Header';
 import ServiceHero from './components/ServiceHero';
 import ServiceNavigation from './components/ServiceNavigation';
+
 import ClientServices from './components/ClientServices';
 import ITStaffing from './components/ITStaffing';
-import OutsourcingServices from './components/OutsourcingServices';
-import Icon from '../../components/AppIcon';
-import Footer from '../../components/ui/Footer';
-import LazyLoad from '../../components/LazyLoad';
+
 import BusinessConsulting from './components/BusinessConsulting';
 import WorkforceSolutions from './components/WorkforceSolutions';
-import SuccessStories from './components/SuccessStories ';
+import OutsourcingServices from './components/OutsourcingServices';
+import Footer from '../../components/ui/Footer';
+import LazyLoad from '../../components/LazyLoad';
 import TechnologyConsulting from './components/TechnologyConsulting ';
+import SuccessStories from './components/SuccessStories ';
 
 const ServicesShowcase = () => {
-  // 🔥 IMPORTANT: default must match ServiceNavigation IDs
-  const [activeService, setActiveService] = useState('client-services');
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
 
+
+  // 🔥 two refs
+  const serviceNavRef = useRef(null);       // cards section
+  const serviceDetailsRef = useRef(null);   // details section (TARGET)
+
+  // 🔥 read active service from URL
+  const activeFromURL = searchParams.get('active');
+
+  // 🔥 state synced with URL
+  const [activeService, setActiveService] = useState(
+    activeFromURL || 'client-services'
+  );
+
+  // 🔥 helper: scroll to SERVICE DETAILS (not cards)
+  const scrollToServiceDetails = () => {
+    if (!serviceDetailsRef.current) return;
+
+    const yOffset = -120; // adjust for sticky header
+    const y =
+      serviceDetailsRef.current.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
+  };
+
+  // Scroll to top on first load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // 🔥 URL → STATE + SCROLL (Home → Service / refresh)
+  useEffect(() => {
+    if (activeFromURL && activeFromURL !== activeService) {
+      setActiveService(activeFromURL);
+
+      setTimeout(() => {
+        scrollToServiceDetails();
+      }, 300);
+    }
+  }, [activeFromURL]);
+
+useEffect(() => {
+  if (location.hash === '#services') {
+    setTimeout(() => {
+      serviceNavRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 300);
+  }
+}, [location]);
+
+
+  // 🔥 STATE → URL + SCROLL (clicking service cards)
+  const handleServiceChange = (serviceId) => {
+    setActiveService(serviceId);
+    navigate(`/service?active=${serviceId}`);
+
+    setTimeout(() => {
+      scrollToServiceDetails();
+    }, 200);
+  };
+
+  // Render service content
   const renderActiveService = () => {
     switch (activeService) {
       case 'client-services':
@@ -30,7 +98,7 @@ const ServicesShowcase = () => {
         return <ITStaffing />;
 
       case 'technology-consulting':
-        return <TechnologyConsulting/>;
+        return <TechnologyConsulting />;
 
       case 'business-consulting':
         return <BusinessConsulting />;
@@ -55,31 +123,23 @@ const ServicesShowcase = () => {
         <ServiceHero />
       </LazyLoad>
 
-      {/* Service Navigation */}
-      <LazyLoad>
-        <ServiceNavigation
-          activeService={activeService}
-          onServiceChange={setActiveService}
-        />
-      </LazyLoad>
+      {/* Service Navigation (CARDS) */}
+      <div ref={serviceNavRef}>
+        <LazyLoad>
+          <ServiceNavigation
+            activeService={activeService}
+            onServiceChange={handleServiceChange}
+          />
+        </LazyLoad>
+      </div>
 
-      {/* Active Service Content */}
+      {/* 🔥 SERVICE DETAILS (SCROLL TARGET) */}
+      <div ref={serviceDetailsRef}>
+        {renderActiveService()}
+      </div>
 
-  {renderActiveService()}
-
-
-      {/* Service Recommendation */}
+      {/* Success Stories */}
       <SuccessStories />
-
-      {/* Footer CTA */}
-      {/* <section
-  className="w-full h-[420px] md:h-[520px] bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/services-cta.jpg')" // image from public folder
-  }}
->
-</section> */}
-
 
       <Footer />
     </div>

@@ -242,17 +242,21 @@ const ServicePathways = () => {
                     </div>
 
                     {/* CTA */}
-                    <div className={`transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        iconName="ArrowRight"
-                        iconPosition="right"
-                        className={`${isHovered ? 'text-black hover:bg-white/20' : ''} transition-colors duration-500`}
-                      >
-                        Learn More
-                      </Button>
-                    </div>
+                   <div className={`transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+  <Link to={`/service?active=${pathway.id}`}>
+  <Button
+    variant="ghost"
+    size="sm"
+    iconName="ArrowRight"
+    iconPosition="right"
+    className="text-black hover:bg-white/20"
+  >
+    Learn More
+  </Button>
+</Link>
+
+</div>
+
                   </div>
                 </div>
               );

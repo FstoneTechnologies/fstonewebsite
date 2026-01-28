@@ -45,7 +45,7 @@ const HeroSection = () => {
             <LazyLoad delay={200}>
               <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-400/30 rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
                 <Shield size={16} className="text-orange-400" />
-                <span className="text-sm font-medium text-orange-300">25+ Years of Proven Expertise</span>
+                <span className="text-sm font-medium text-orange-300">20+ Years of Proven Expertise</span>
               </div>
             </LazyLoad>
 
@@ -80,21 +80,23 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <LazyLoad delay={1000}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <Link to="/contact">
-                  <button className="group inline-flex items-center space-x-2 bg-[#1F74B5] hover:bg-orange-400 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                    <Rocket size={20} className="group-hover:animate-pulse" />
-                    <span>Start Your Journey</span>
-                  </button>
-                </Link>
+              <div className="flex justify-center mb-16">
+  <Link
+    to="/contact"
+    className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
+  >
+    {/* SLIDING ICON */}
+    <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+      →
+    </span>
 
-                <Link to="/contact">
-                  <button className="group inline-flex items-center space-x-2 border-2 border-teal-400 text-teal-300 hover:bg-teal-400 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
-                    <Calendar size={20} />
-                    <span>Schedule Consultation</span>
-                  </button>
-                </Link>
-              </div>
+    {/* TEXT */}
+    <span className="relative z-10 transition-all duration-300">
+      Start Your Journey
+    </span>
+  </Link>
+</div>
+
             </LazyLoad>
           </div>
         </LazyLoad>

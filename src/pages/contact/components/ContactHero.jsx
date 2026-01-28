@@ -4,7 +4,8 @@ import Button from '../../../components/ui/Button';
 
 const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
   return (
-    <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary pt-24 pb-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-900 via-teal-600 to-blue-800 pt-24 pb-16 overflow-hidden">
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
@@ -47,28 +48,23 @@ const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant="default"
-                size="lg"
-                onClick={onBookConsultation}
-                iconName="Calendar"
-                iconPosition="left"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-cta"
-              >
-                Book Consultation
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={onQuickInquiry}
-                iconName="MessageCircle"
-                iconPosition="left"
-                className="border-white text-white hover:bg-white hover:text-primary"
-              >
-                Quick Inquiry
-              </Button>
-            </div>
+           <div className="flex flex-col sm:flex-row gap-4">
+  <button
+    onClick={onQuickInquiry}
+    className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
+  >
+    {/* SLIDING ICON */}
+    <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+      →
+    </span>
+
+    {/* TEXT */}
+    <span className="relative z-10 transition-all duration-300">
+      Quick Inquiry
+    </span>
+  </button>
+</div>
+
           </div>
 
           {/* Contact Cards */}

@@ -1,37 +1,42 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ClientServices = () => {
   const services = [
-    {
-      title: 'Talent Advisory Services',
-      description:
-        'Strategic talent advisory to help organisations attract, develop, and retain high-performing teams aligned with business goals.',
-      image:
-        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop'
-    },
-    {
-      title: 'Staffing & Recruiting Services',
-      description:
-        'Contract and permanent staffing solutions across industries to secure the right talent for evolving business needs.',
-      image:
-        'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'
-    },
-    {
-      title: 'Managed Delivery Services',
-      description:
-        'Managed, project-based, and outsourced service delivery across IT, engineering, clinical, and business operations.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop'
-    },
-    {
-      title: 'Search & Workforce Management',
-      description:
-        'Executive search and end-to-end workforce management solutions including RPO, MSP, and VMS implementation.',
-      image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop'
-    }
-  ];
+  {
+    title: 'Talent Advisory Services',
+    description:
+      'Strategic talent advisory to help organisations attract, develop, and retain high-performing teams aligned with business goals.',
+    image:
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop',
+    link: '/services/talent-advisory',
+  },
+  {
+    title: 'Staffing & Recruiting Services',
+    description:
+      'Contract and permanent staffing solutions across industries to secure the right talent for evolving business needs.',
+    image:
+      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop',
+    link: '/services/staffing-recruiting',
+  },
+  {
+    title: 'Managed Delivery Services',
+    description:
+      'Managed, project-based, and outsourced service delivery across IT, engineering, clinical, and business operations.',
+    image:
+      'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+    link: '/services/managed-delivery',
+  },
+  {
+    title: 'Search & Workforce Management',
+    description:
+      'Executive search and end-to-end workforce management solutions including RPO, MSP, and VMS implementation.',
+    image:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
+    link: '/services/search-workforce',
+  },
+];
 
   return (
     <section className="bg-[#f2fbfc] py-20">
@@ -70,32 +75,28 @@ const ClientServices = () => {
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {service.title}
                 </h3>
+
                 <p className="text-white/90 leading-relaxed text-sm mb-6">
                   {service.description}
                 </p>
 
-                <span
-                  className="
+                <Link
+  to={service.link}
+  className="
     text-cyan-300 font-medium inline-flex items-center gap-2
     transition-all duration-300 ease-out
     hover:text-[#f99a0b]
     hover:scale-110
   "
-                >
-                  Learn more
-                  <span
-                    className="
-      text-lg transition-all duration-300 ease-out
-      hover:translate-x-1
-      hover:scale-125
-    "
-                  >
-                    →
-                  </span>
-                </span>
-
+>
+  Learn more
+  <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
 
               </div>
+
 
             </div>
           ))}

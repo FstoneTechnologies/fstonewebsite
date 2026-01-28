@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -111,7 +112,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navigationItems?.map((item) => (
-              <Link
+              <NavLink 
                 key={item?.path}
                 to={item?.path}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-brand ${isActivePath(item?.path)
@@ -122,7 +123,7 @@ const Header = () => {
               >
                 <Icon name={item?.icon} size={16} />
                 <span>{item?.name}</span>
-              </Link>
+              </NavLink >
             ))}
           </nav>
 

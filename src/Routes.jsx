@@ -3,6 +3,7 @@ import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import FstoneCareers from "pages/careers";
+import TalentAdvisoryServices from "pages/service/components/TalentAdvisoryServices";
 
 
 const NotFound = lazy(() => import("pages/NotFound"));
@@ -21,6 +22,7 @@ const Routes = () => {
           {/* Define your route here */}
           <Route path="/" element={<Homepage />} />
           <Route path="/service" element={<ServicesShowcase />} />
+          <Route path="/services/talent-advisory" element={<TalentAdvisoryServices />} />
           <Route path="/contact" element={<ContactConsultationPage />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/about" element={<AboutDaRYTE />} />

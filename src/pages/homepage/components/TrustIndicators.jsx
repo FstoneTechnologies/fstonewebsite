@@ -166,7 +166,7 @@ const TrustIndicators = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground">Founder & Managing Director</h3>
-                    <p className="text-muted-foreground">25+ Years in Workforce & Business</p>
+                    <p className="text-muted-foreground">20+ Years in Workforce & Business</p>
                   </div>
                 </div>
                 <h4 className="text-2xl font-bold text-foreground mb-4">Decades of Workforce Leadership</h4>

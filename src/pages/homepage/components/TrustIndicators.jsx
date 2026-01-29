@@ -5,6 +5,8 @@ import Image from '../../../components/AppImage';
 import LazyLoad from '../../../components/LazyLoad';
 
 const TrustIndicators = () => {
+
+
   const trustMetrics = [
     {
       icon: 'Award',
@@ -62,28 +64,38 @@ const TrustIndicators = () => {
       icon: 'Users'
     }
   ];
+const partnerships = [
+  {
+    name: 'DTCC',
+    logo: '/dtcc.png',
+  },
+  {
+    name: 'TATA',
+    logo: '/tata.png',
+  },
+  {
+    name: 'Infosys',
+    logo: '/infosys.png',
+  },
+  {
+    name: 'Publicis Sapient',
+    logo: '/publicis-sapient.png',
+  },
+  {
+    name: 'Wipro',
+    logo: '/wipro.png',
+  },
+  {
+    name: 'Coforge',
+    logo: '/coforge.png',
+  },
+  {
+    name: 'Photon',
+    logo: '/photon.png',
+  }
+];
 
-  const partnerships = [
-    {
-      name: 'DTCC',
-      description: 'Global financial services infrastructure and technology partner',
-      logo: '/dtcc.png',
-      count: 'Global Partner'
-    },
-    {
-      name: 'TATA',
-      description: 'Enterprise and technology transformation partner',
-      logo: '/tata.png',
-      count: 'Enterprise Partner'
-    },
-    {
-      name: 'Infosys',
-      description: 'IT services and digital transformation partner',
-      logo: '/infosys.png',
-      count: 'Technology Partner'
-    }
-  ];
-
+  const movingPartners = [...partnerships, ...partnerships];
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -272,32 +284,67 @@ const TrustIndicators = () => {
 
 
         <LazyLoad>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground text-center mb-12">Our Partners</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnerships.map((partner, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      animation="fadeIn"
-                      delay={index * 200}
-                      lazy
-                    />
-                  </div>
+         <div>
+  <h3 className="text-2xl font-bold text-foreground text-center mb-12">
+    Our Partners
+  </h3>
+<style>
+    {`
+      @keyframes partners-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
 
-                  <h4 className="font-semibold text-foreground mb-2">{partner.name}</h4>
-                  <p className="text-sm text-muted-foreground mb-2">{partner.description}</p>
-                  <div className="text-lg font-bold text-primary">{partner.count}</div>
-                </div>
-              ))}
-            </div>
+      .partners-scroll {
+        animation: partners-scroll 30s linear infinite;
+      }
+
+      .partners-scroll:hover {
+        animation-play-state: paused;
+      }
+    `}
+  </style>
+  <div className="relative overflow-hidden">
+    <div className="flex gap-12 animate-partners-scroll hover:[animation-play-state:paused]">
+      {movingPartners.map((partner, index) => (
+        <div
+          key={index}
+          className="min-w-[260px] text-center group"
+        >
+          <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+            <Image
+              src={partner.logo}
+              alt={partner.name}
+              className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              animation="fadeIn"
+              delay={index * 100}
+              lazy
+            />
           </div>
+
+          <h4 className="font-semibold text-foreground mb-1">
+            {partner.name}
+          </h4>
+          <p className="text-sm text-muted-foreground mb-2">
+            {partner.description}
+          </p>
+          <div className="text-sm font-semibold text-primary">
+            {partner.count}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
         </LazyLoad>
       </div>
     </section>
+    
   );
 };
 

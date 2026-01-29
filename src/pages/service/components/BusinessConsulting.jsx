@@ -1,4 +1,6 @@
+import { link } from 'd3';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BusinessConsulting = () => {
   const services = [
@@ -6,29 +8,29 @@ const BusinessConsulting = () => {
       title: 'Business Strategy & Advisory',
       description:
         'We help organizations define clear business strategies aligned with market trends, digital innovation, and long-term growth objectives.',
-      image:
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop'
+      image:'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
+      link: '/services/business-consulting/business-strategy-advisory'
     },
     {
       title: 'Process Optimization',
       description:
         'Streamline operations, improve efficiency, and reduce costs through data-driven process analysis and optimization.',
-      image:
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop'
+      image:'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+      link: '/services/business-consulting/process-optimization'
     },
     {
       title: 'Digital Business Transformation',
       description:
         'Enable digital-first business models by aligning people, processes, and technology for sustainable transformation.',
-      image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop'
+      image:'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
+      link: '/services/business-consulting/digital-business-transformation'
     },
     {
       title: 'Change & Risk Management',
       description:
         'Support organizational change with structured governance, risk mitigation, and change management frameworks.',
-      image:
-        'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop'
+      image:'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop',
+      link: '/services/business-consulting/change-risk-management'
     }
   ];
 
@@ -66,9 +68,19 @@ const BusinessConsulting = () => {
                 <p className="text-white/90 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <span className="text-cyan-300 font-medium inline-flex items-center gap-2 hover:text-[#f99a0b] hover:scale-110 transition-all">
-                  Learn more →
-                </span>
+                 {service.link && (
+                                    <Link
+                                      to={service.link}
+                                      className="text-cyan-300 font-medium inline-flex items-center gap-2
+                      transition-all duration-300 ease-out
+                      hover:text-[#f99a0b] hover:scale-110"
+                                    >
+                                      Learn more
+                                      <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+                                        →
+                                      </span>
+                                    </Link>
+                                  )}
               </div>
 
             </div>

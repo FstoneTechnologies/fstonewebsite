@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ITStaffing = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -9,49 +10,60 @@ const ITStaffing = () => {
       title: 'Web Development',
       description:
         'Skilled frontend and backend developers delivering scalable, secure, and high-performance web applications.',
-      image: '/webdevelopment.webp'
+      image: '/webdevelopment.webp',
+      link: '/services/it-staff/web-development'
     },
     {
       title: 'Mainframe Programming',
       description:
         'Experienced mainframe professionals skilled in COBOL, JCL, DB2, and enterprise legacy systems.',
-      image: '/Mainframedev.avif'
+      image: '/Mainframedev.avif',
+      link: '/services/it-staff/mainframe'
     },
     {
       title: 'Business Analysis',
       description:
         'Business analysts bridging business goals and technology with data-driven insights.',
-      image: '/BusinessAnalysis.webp'
+      image: '/BusinessAnalysis.webp',
+      link: '/services/it-staff/business-analysis'
+
     },
     {
       title: 'Software Development & Engineering',
       description:
         'Experienced software engineers across technologies to design, build, and maintain enterprise-grade solutions.',
-      image: '/softwaredevelopment.webp'
+      image: '/softwaredevelopment.webp',
+      link: '/services/it-staff/software-engineering'
+
     },
     {
       title: 'Database Development',
       description:
         'Database architects and developers skilled in design, optimization, migration, and performance tuning.',
-      image: '/database-building.jpg'
+      image: '/database-building.jpg',
+      link: '/services/it-staff/database-development'
     },
     {
       title: 'Network Engineering',
       description:
         'Network engineers ensuring secure, scalable, and high-availability IT infrastructure.',
-      image: '/NetworkEngineering.avif'
+      image: '/NetworkEngineering.avif',
+      link: '/services/it-staff/network-engineering'
+
     },
     {
       title: 'System Analysis',
       description:
         'System analysts evaluating, designing, and improving IT systems to meet business needs.',
-      image: '/SystemAnalysis.avif'
+      image: '/SystemAnalysis.avif',
+      link: '/services/it-staff/system-analysis'
     },
     {
       title: 'Help Desk & Technical Support',
       description:
         'Help-desk professionals providing reliable L1–L3 technical support and incident resolution.',
-      image: '/HelpDesk.webp'
+      image: '/HelpDesk.webp',
+      link: '/services/it-staff/help-desk'
     }
   ];
 
@@ -110,25 +122,20 @@ const ITStaffing = () => {
                   </p>
 
                   {/* Learn more */}
-                  <span
-                    className="
-                      text-cyan-300 font-medium inline-flex items-center gap-2
-                      transition-all duration-300 ease-out
-                      hover:text-[#f99a0b]
-                      hover:scale-110
-                    "
-                  >
-                    Learn more
-                    <span
-                      className="
-                        text-lg transition-all duration-300 ease-out
-                        hover:translate-x-1
-                        hover:scale-125
-                      "
+                  {service.link && (
+                    <Link
+                      to={service.link}
+                      className="text-cyan-300 font-medium inline-flex items-center gap-2
+      transition-all duration-300 ease-out
+      hover:text-[#f99a0b] hover:scale-110"
                     >
-                      →
-                    </span>
-                  </span>
+                      Learn more
+                      <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </Link>
+                  )}
+
                 </div>
 
               </div>

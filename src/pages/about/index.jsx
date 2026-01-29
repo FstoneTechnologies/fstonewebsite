@@ -6,6 +6,7 @@ import Footer from '../../components/ui/Footer';
 import LazyLoad from '../../components/LazyLoad';
 import AboutOverview from './components/AboutOverview';
 import ServiceLines from './components/ServiceLines';
+import OfficeLocations from './components/OfficeLocations';
 // import LeadershipSection from './components/LeadershipSection';
 const AboutDaRYTE = () => {
   return (
@@ -24,9 +25,13 @@ const AboutDaRYTE = () => {
         <ServiceLines />
       </LazyLoad>
       {/* Company Culture */}
-      <LazyLoad>
-        <CompanyCulture />
-      </LazyLoad>
+        <LazyLoad>
+          <CompanyCulture />
+        </LazyLoad>
+
+        <LazyLoad>
+          <OfficeLocations/>
+        </LazyLoad>
       {/* Impact Metrics */}
       {/* <LazyLoad>
         <LeadershipSection/>

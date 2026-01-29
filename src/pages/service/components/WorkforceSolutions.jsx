@@ -1,4 +1,6 @@
+import { link } from 'd3';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WorkforceSolutions = () => {
   const services = [
@@ -6,29 +8,29 @@ const WorkforceSolutions = () => {
       title: 'Workforce Planning',
       description:
         'Strategic workforce planning to align talent supply with business demand across geographies and functions.',
-      image:
-        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop',
+      link: '/services/workforce-solutions/workforce-planning'
     },
     {
       title: 'RPO & MSP Services',
       description:
         'End-to-end recruitment process outsourcing (RPO) and managed service provider (MSP) solutions.',
-      image:
-        'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop',
+      link: '/services/workforce-solutions/rpo-msp-services'
     },
     {
       title: 'Workforce Analytics',
       description:
         'Leverage workforce data and analytics to improve productivity, engagement, and workforce performance.',
-      image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      link: '/services/workforce-solutions/workforce-analytics'
     },
     {
       title: 'Compliance & Governance',
       description:
         'Ensure workforce compliance, risk mitigation, and governance across contracts, vendors, and regions.',
-      image:
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
+      link: '/services/workforce-solutions/compliance-governance'
     }
   ];
 
@@ -66,9 +68,19 @@ const WorkforceSolutions = () => {
                 <p className="text-white/90 text-sm mb-6">
                   {service.description}
                 </p>
-                <span className="text-cyan-300 hover:text-[#f99a0b] transition-all">
-                  Learn more →
-                </span>
+                {service.link && (
+                  <Link
+                    to={service.link}
+                    className="text-cyan-300 font-medium inline-flex items-center gap-2
+                      transition-all duration-300 ease-out
+                      hover:text-[#f99a0b] hover:scale-110"
+                  >
+                    Learn more
+                    <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                )}
               </div>
 
             </div>

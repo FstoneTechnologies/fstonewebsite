@@ -1,4 +1,6 @@
+import { link } from 'd3';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TechnologyConsulting = () => {
   const services = [
@@ -6,29 +8,30 @@ const TechnologyConsulting = () => {
       title: 'Digital Transformation',
       description:
         'We help organizations modernize their digital landscape by transforming legacy systems, processes, and platforms into scalable, cloud-ready solutions.',
-      image: '/DigitalTransformation.jpg'
-        
+      image: '/DigitalTransformation.jpg',
+      link: '/services/technology-consulting/digital-transformation'
+
     },
     {
       title: 'Cloud & Infrastructure Consulting',
       description:
         'Strategic cloud consulting to design, migrate, and optimize secure infrastructure across AWS, Azure, and hybrid environments.',
-      image:
-        '/cloud.jpg'
+      image: '/cloud.jpg',
+      link: '/services/technology-consulting/cloud-infrastructure'
     },
     {
       title: 'Application Modernization',
       description:
         'Re-architect, refactor, and enhance applications to improve performance, scalability, security, and user experience.',
-      image:
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+      link: '/services/technology-consulting/application-modernization'
     },
     {
       title: 'Data, Analytics & AI',
       description:
         'Leverage data-driven insights, advanced analytics, and AI solutions to enable smarter decision-making and business innovation.',
-      image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      link: '/services/technology-consulting/data-analytics-ai'
     }
   ];
 
@@ -72,25 +75,19 @@ const TechnologyConsulting = () => {
                   {service.description}
                 </p>
 
-                <span
-                  className="
-                    text-cyan-300 font-medium inline-flex items-center gap-2
-                    transition-all duration-300 ease-out
-                    hover:text-[#f99a0b]
-                    hover:scale-110
-                  "
-                >
-                  Learn more
-                  <span
-                    className="
-                      text-lg transition-all duration-300 ease-out
-                      hover:translate-x-1
-                      hover:scale-125
-                    "
+                {service.link && (
+                  <Link
+                    to={service.link}
+                    className="text-cyan-300 font-medium inline-flex items-center gap-2
+                      transition-all duration-300 ease-out
+                      hover:text-[#f99a0b] hover:scale-110"
                   >
-                    →
-                  </span>
-                </span>
+                    Learn more
+                    <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                )}
               </div>
 
             </div>

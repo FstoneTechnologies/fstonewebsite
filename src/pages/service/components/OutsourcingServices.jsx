@@ -1,4 +1,6 @@
+import { link } from 'd3';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OutsourcingServices = () => {
   const services = [
@@ -6,29 +8,29 @@ const OutsourcingServices = () => {
       title: 'IT Outsourcing',
       description:
         'End-to-end IT outsourcing services delivering reliable, scalable, and cost-effective technology operations.',
-      image:
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+      link: '/services/outsourcing/it-outsourcing'
     },
     {
       title: 'Engineering & Development Services',
       description:
         'Dedicated engineering teams for application development, maintenance, and product innovation.',
-      image:
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
+      link: '/services/outsourcing/engineering-development'
     },
     {
       title: 'Business Process Outsourcing',
       description:
         'BPO services across operations, support, and back-office functions to improve efficiency and reduce costs.',
-      image:
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+      link: '/services/outsourcing/business-process-outsourcing'
     },
     {
       title: '24×7 Global Support',
       description:
         'Round-the-clock support services leveraging global delivery centers across India, US, and Europe.',
-      image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop'
+      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop',
+      link: '/services/outsourcing/global-support-247'
     }
   ];
 
@@ -66,9 +68,19 @@ const OutsourcingServices = () => {
                 <p className="text-white/90 text-sm mb-6">
                   {service.description}
                 </p>
-                <span className="text-cyan-300 hover:text-[#f99a0b] transition-all">
-                  Learn more →
-                </span>
+                {service.link && (
+                  <Link
+                    to={service.link}
+                    className="text-cyan-300 font-medium inline-flex items-center gap-2
+                      transition-all duration-300 ease-out
+                      hover:text-[#f99a0b] hover:scale-110"
+                  >
+                    Learn more
+                    <span className="text-lg transition-all duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
+                )}
               </div>
 
             </div>

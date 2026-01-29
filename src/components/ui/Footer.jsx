@@ -95,12 +95,12 @@ const Footer = () => {
 
               <div className="flex items-center space-x-3">
                 <Icon name="Phone" size={18} />
-                <p className="text-black/80">+91 1234567890</p>
+                <p className="text-black/80">US  732 746 0010</p>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Icon name="Mail" size={18} />
-                <p className="text-black/80">hello@fstone.com</p>
+                <p className="text-black/80">info@fstonetechnologies.com</p>
               </div>
 
               <div className="flex items-center space-x-3">

@@ -79,7 +79,7 @@ const partnerships = [
   },
   {
     name: 'Publicis Sapient',
-    logo: '/publicis-sapient.png',
+    logo: '/pb.png',
   },
   {
     name: 'Wipro',
@@ -87,7 +87,7 @@ const partnerships = [
   },
   {
     name: 'Coforge',
-    logo: '/coforge.png',
+    logo: '/cf.jpg',
   },
   {
     name: 'Photon',
@@ -300,7 +300,7 @@ const partnerships = [
       }
 
       .partners-scroll {
-        animation: partners-scroll 30s linear infinite;
+        animation: partners-scroll 12s linear infinite;
       }
 
       .partners-scroll:hover {
@@ -309,7 +309,8 @@ const partnerships = [
     `}
   </style>
   <div className="relative overflow-hidden">
-    <div className="flex gap-12 animate-partners-scroll hover:[animation-play-state:paused]">
+   <div className="flex gap-12 partners-scroll">
+
       {movingPartners.map((partner, index) => (
         <div
           key={index}

@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -71,7 +72,7 @@ const DigitalTransformationConsulting = () => {
             </div>
           </div>
         </section>
-
+        <ContactUs/>
         <Footer />
       </main>
     </>

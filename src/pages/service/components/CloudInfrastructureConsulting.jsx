@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -11,7 +12,7 @@ const CloudInfrastructureConsulting = () => {
         <section className="relative h-[75vh] min-h-[520px] flex items-center">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/CloudInfrastructure.jpg')" }}
+            style={{ backgroundImage: "url('/cl.jpg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
@@ -69,7 +70,7 @@ const CloudInfrastructureConsulting = () => {
             </div>
           </div>
         </section>
-
+        <ContactUs/>
         <Footer />
       </main>
     </>

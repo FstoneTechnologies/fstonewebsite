@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -13,7 +14,7 @@ const SearchWorkforceManagement = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/SearchWorkforceManagement.jpg')"
+              backgroundImage: "url('/swm.jpg')"
             }}
           />
 
@@ -87,7 +88,7 @@ const SearchWorkforceManagement = () => {
 
           </div>
         </section>
-
+            <ContactUs/>
         <Footer />
       </main>
     </>

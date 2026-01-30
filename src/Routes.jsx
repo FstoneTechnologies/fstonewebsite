@@ -31,6 +31,9 @@ import ITOutsourcing from "pages/service/components/ITOutsourcing";
 import EngineeringDevelopmentServices from "pages/service/components/EngineeringDevelopmentServices";
 import BusinessProcessOutsourcing from "pages/service/components/BusinessProcessOutsourcing";
 import GlobalSupport247 from "pages/service/components/GlobalSupport247";
+import CookieConsent from "components/ui/CookieConsent";
+import CookiePolicy from "components/ui/CookiePolicy";
+import PrivacyPolicy from "components/ui/PrivacyPolicy";
 
 
 const NotFound = lazy(() => import("pages/NotFound"));
@@ -41,7 +44,9 @@ const AboutDaRYTE = lazy(() => import('./pages/about'));
 
 const Routes = () => {
   return (
+    
     <BrowserRouter>
+     <CookieConsent/>
       <ErrorBoundary>
       <ScrollToTop />
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-muted-foreground">Loading...</div>}>
@@ -82,6 +87,9 @@ const Routes = () => {
          <Route path="/services/outsourcing/engineering-development" element={<EngineeringDevelopmentServices/>} />
          <Route path="/services/outsourcing/business-process-outsourcing" element={<BusinessProcessOutsourcing/>} />
          <Route path="/services/outsourcing/global-support-247" element={<GlobalSupport247/>} />
+         
+         <Route path="/cookie-policy" element={<CookiePolicy/>} />
+         <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
 
           <Route path="/contact" element={<ContactConsultationPage />} />
           <Route path="/homepage" element={<Homepage />} />

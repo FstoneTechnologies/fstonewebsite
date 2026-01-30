@@ -64,36 +64,36 @@ const TrustIndicators = () => {
       icon: 'Users'
     }
   ];
-const partnerships = [
-  {
-    name: 'DTCC',
-    logo: '/dtcc.png',
-  },
-  {
-    name: 'TATA',
-    logo: '/tata.png',
-  },
-  {
-    name: 'Infosys',
-    logo: '/infosys.png',
-  },
-  {
-    name: 'Publicis Sapient',
-    logo: '/pb.png',
-  },
-  {
-    name: 'Wipro',
-    logo: '/wipro.png',
-  },
-  {
-    name: 'Coforge',
-    logo: '/cf.jpg',
-  },
-  {
-    name: 'Photon',
-    logo: '/photon.png',
-  }
-];
+  const partnerships = [
+    {
+      name: 'DTCC',
+      logo: '/dtcc.png',
+    },
+    {
+      name: 'TATA',
+      logo: '/tcs.webp',
+    },
+    {
+      name: 'Infosys',
+      logo: '/infosys.png',
+    },
+    {
+      name: 'Publicis Sapient',
+      logo: '/pb.png',
+    },
+    {
+      name: 'Wipro',
+      logo: '/wipro.png',
+    },
+    {
+      name: 'Coforge',
+      logo: '/cf.jpg',
+    },
+    {
+      name: 'Photon',
+      logo: '/photon.png',
+    }
+  ];
 
   const movingPartners = [...partnerships, ...partnerships];
   return (
@@ -235,48 +235,48 @@ const partnerships = [
               Certifications & Recognitions
             </h3>
 
-           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {certifications.map((cert, index) => {
-    const cardColors = [
-      'bg-emerald-500',
-      'bg-purple-500',
-      'bg-amber-500',
-      'bg-sky-500',
-    ];
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {certifications.map((cert, index) => {
+                const cardColors = [
+                  'bg-emerald-500',
+                  'bg-purple-500',
+                  'bg-amber-500',
+                  'bg-sky-500',
+                ];
 
-    return (
-      <div
-        key={index}
-        className={`
+                return (
+                  <div
+                    key={index}
+                    className={`
           ${cardColors[index % cardColors.length]}
           rounded-xl p-6 text-center
           transition-all duration-300
           hover:shadow-brand hover:scale-105
         `}
-      >
-        {/* Icon */}
-        <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
-          <Icon name={cert.icon} size={20} className="text-gray-800" />
-        </div>
+                  >
+                    {/* Icon */}
+                    <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                      <Icon name={cert.icon} size={20} className="text-gray-800" />
+                    </div>
 
-        {/* Title */}
-        <h4 className="font-semibold text-white mb-2">
-          {cert.name}
-        </h4>
+                    {/* Title */}
+                    <h4 className="font-semibold text-white mb-2">
+                      {cert.name}
+                    </h4>
 
-        {/* Authority */}
-        <p className="text-sm text-white/90 mb-2">
-          {cert.authority}
-        </p>
+                    {/* Authority */}
+                    <p className="text-sm text-white/90 mb-2">
+                      {cert.authority}
+                    </p>
 
-        {/* Year */}
-        <div className="text-xs text-white font-medium">
-          {cert.year}
-        </div>
-      </div>
-    );
-  })}
-</div>
+                    {/* Year */}
+                    <div className="text-xs text-white font-medium">
+                      {cert.year}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
 
           </div>
         </LazyLoad>
@@ -284,12 +284,12 @@ const partnerships = [
 
 
         <LazyLoad>
-         <div>
-  <h3 className="text-2xl font-bold text-foreground text-center mb-12">
-    Our Partners
-  </h3>
-<style>
-    {`
+          <div>
+            <h3 className="text-2xl font-bold text-foreground text-center mb-12">
+              Our Partners
+            </h3>
+            <style>
+              {`
       @keyframes partners-scroll {
         0% {
           transform: translateX(0);
@@ -307,45 +307,45 @@ const partnerships = [
         animation-play-state: paused;
       }
     `}
-  </style>
-  <div className="relative overflow-hidden">
-   <div className="flex gap-12 partners-scroll">
+            </style>
+            <div className="relative overflow-hidden">
+              <div className="flex gap-12 partners-scroll">
 
-      {movingPartners.map((partner, index) => (
-        <div
-          key={index}
-          className="min-w-[260px] text-center group"
-        >
-          <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-            <Image
-              src={partner.logo}
-              alt={partner.name}
-              className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
-              animation="fadeIn"
-              delay={index * 100}
-              lazy
-            />
-          </div>
+                {movingPartners.map((partner, index) => (
+                  <div
+                    key={index}
+                    className="min-w-[260px] text-center group"
+                  >
+                    <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        animation="fadeIn"
+                        delay={index * 100}
+                        lazy
+                      />
+                    </div>
 
-          <h4 className="font-semibold text-foreground mb-1">
-            {partner.name}
-          </h4>
-          <p className="text-sm text-muted-foreground mb-2">
-            {partner.description}
-          </p>
-          <div className="text-sm font-semibold text-primary">
-            {partner.count}
+                    <h4 className="font-semibold text-foreground mb-1">
+                      {partner.name}
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      {partner.description}
+                    </p>
+                    <div className="text-sm font-semibold text-primary">
+                      {partner.count}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
 
         </LazyLoad>
       </div>
     </section>
-    
+
   );
 };
 

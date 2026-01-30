@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -14,7 +15,7 @@ const EngineeringDevelopmentServices = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/EngineeringDevelopmentServices.jpg')"
+              backgroundImage: "url('/eds.jpg')"
             }}
           />
 
@@ -92,7 +93,7 @@ const EngineeringDevelopmentServices = () => {
 
           </div>
         </section>
-
+        <ContactUs/>
         {/* FOOTER */}
         <Footer />
       </main>

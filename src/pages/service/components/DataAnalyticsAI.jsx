@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -13,7 +14,7 @@ const DataAnalyticsAI = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/DataAnalyticsAI.jpg')"
+              backgroundImage: "url('/dataa.jpg')"
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
@@ -86,6 +87,7 @@ const DataAnalyticsAI = () => {
           </div>
         </section>
 
+        <ContactUs/>
         <Footer />
       </main>
     </>

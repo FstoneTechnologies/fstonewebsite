@@ -1,3 +1,4 @@
+import ContactUs from "components/ui/ContactUs";
 import Footer from "components/ui/Footer";
 import Header from "components/ui/Header";
 import React from "react";
@@ -14,7 +15,7 @@ const GlobalSupport247 = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/GlobalSupport247.jpg')"
+              backgroundImage: "url('/global.jpg')"
             }}
           />
 
@@ -90,7 +91,7 @@ const GlobalSupport247 = () => {
 
           </div>
         </section>
-
+        <ContactUs/>
         {/* FOOTER */}
         <Footer />
       </main>

@@ -7,7 +7,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-5 gap-8 items-start">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 items-start">
+
 
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -88,30 +89,32 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
+          <div className="lg:col-span-1 px-1">
+  <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
 
-            <div className="space-y-4">
+  <div className="space-y-4">
+    <div className="flex items-center gap-3">
+      <Icon name="Phone" size={18} />
+      <p className="text-black/80">+1 732 746 0010</p>
+    </div>
 
-              <div className="flex items-center space-x-3">
-                <Icon name="Phone" size={18} />
-                <p className="text-black/80">US  732 746 0010</p>
-              </div>
+    <div className="flex items-center gap-3">
+      <Icon name="MailIcon" size={18} />
+      <p className="text-black/80 break-all text-xm">
+        info@fstonetechnologies.com
+      </p>
+    </div>
 
-              <div className="flex items-center space-x-3">
-                <Icon name="Mail" size={18} />
-                <p className="text-black/80">info@fstonetechnologies.com</p>
-              </div>
+    <div className="flex items-start gap-3">
+      <Icon name="Clock" size={18} />
+      <p className="text-black/80 text-sm leading-relaxed">
+        Mon–Fri: 9:00AM – 6:00PM<br />
+        Sat–Sun: Closed
+      </p>
+    </div>
+  </div>
+</div>
 
-              <div className="flex items-center space-x-3">
-                <Icon name="Clock" size={18} />
-                <p className="text-black/80 text-sm">
-                  Mon–Fri: 9:00AM – 6:00PM<br />
-                  Sat–Sun: Closed
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Office Locations */}
           <div>
@@ -119,20 +122,20 @@ const Footer = () => {
 
   <div className="space-y-4 text-black/80 text-sm">
     <p>
-      <strong>USA – Pennsylvania</strong><br />
+      USA – Pennsylvania<br />
       2003 S Easton Rd, Suite 308<br />
       Doylestown, PA 18901
     </p>
 
     <p>
-      <strong>USA – New Jersey</strong><br />
+      USA – New Jersey<br />
       3084, Congressional Office Park, Route 27<br />
       Suite #3, Kendall Park<br />
       New Jersey 08824
     </p>
 
     <p>
-      <strong>India – Gurugram</strong><br />
+      India – Gurugram<br />
       Suite 911 B, Tower B4<br />
       Spaze IT Park, Sector 49<br />
       Gurugram, Haryana 122018

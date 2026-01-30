@@ -108,9 +108,9 @@ const SuccessStories = () => {
                                         </h3>
                                     </div>
 
-                                    <button className="mt-6 self-start px-6 py-2 bg-[#0E5CAD] text-white font-medium transition-all hover:scale-105 hover:bg-[#0B4A8A]">
+                                    {/* <button className="mt-6 self-start px-6 py-2 bg-[#0E5CAD] text-white font-medium transition-all hover:scale-105 hover:bg-[#0B4A8A]">
                                         Read the Story
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
 

@@ -30,7 +30,7 @@ const ContactMethods = () => {
       icon: 'Phone',
       title: 'Phone Support',
       description: 'Direct line to our experts',
-      details: '+91 98765 43210',
+      details: '+1 732 746 0010',
       hours: 'Mon–Fri: 9:00 AM – 6:00 PM',
       response: 'Immediate',
       color: 'bg-green-600'
@@ -40,7 +40,7 @@ const ContactMethods = () => {
       icon: 'Mail',
       title: 'Email Support',
       description: 'Detailed written communication',
-      details: 'hello@fstone.com',
+      details: 'info@fstonetechnologies.com',
       hours: '24/7 Monitoring',
       response: 'Within 24 hours',
       color: 'bg-blue-600'

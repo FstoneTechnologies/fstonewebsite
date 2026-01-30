@@ -21,12 +21,12 @@ const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
               <span className="text-white/80 text-sm font-medium">Multi-Channel Engagement</span>
             </div>
-            
+
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Let's Build Your
               <span className="block text-accent">Success Story</span>
             </h1>
-            
+
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Connect with our experts through your preferred channel. From quick consultations to strategic planning sessions, we're here to accelerate your growth journey.
             </p>
@@ -48,22 +48,22 @@ const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
             </div>
 
             {/* CTA Buttons */}
-           <div className="flex flex-col sm:flex-row gap-4">
-  <button
-    onClick={onQuickInquiry}
-    className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
-  >
-    {/* SLIDING ICON */}
-    <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
-      →
-    </span>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={onQuickInquiry}
+                className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
+              >
+                {/* SLIDING ICON */}
+                <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+                  →
+                </span>
 
-    {/* TEXT */}
-    <span className="relative z-10 transition-all duration-300">
-      Quick Inquiry
-    </span>
-  </button>
-</div>
+                {/* TEXT */}
+                <span className="relative z-10 transition-all duration-300">
+                  Quick Inquiry
+                </span>
+              </button>
+            </div>
 
           </div>
 
@@ -79,7 +79,7 @@ const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
                   <p className="text-white/80 text-sm">Immediate assistance</p>
                 </div>
               </div>
-              <p className="text-white/90 text-lg font-medium">+91 9812345671</p>
+              <p className="text-white/90 text-lg font-medium">+1 732 746 0010</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
@@ -92,33 +92,33 @@ const ContactHero = ({ onBookConsultation, onQuickInquiry }) => {
                   <p className="text-white/80 text-sm">Detailed inquiries</p>
                 </div>
               </div>
-              <p className="text-white/90 text-lg font-medium">hello@fstone.com</p>
+              <p className="text-white/90 text-lg font-medium">info@fstonetechnologies.com</p>
             </div>
 
-           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-  <div className="flex items-center space-x-4 mb-4">
-    
-    {/* Clickable Icon */}
-    <a
-      href="https://www.google.com/maps/place/Fstone+Technologies/@28.4133293,77.0416733,17z/data=!3m1!5s0x390d2283d6ee1097:0x328a4c68e4c6f888!4m14!1m7!3m6!1s0x390d229ac87cfdd5:0x69e8530883d800e0!2sFstone+Technologies!8m2!3d28.4133246!4d77.0442482!16s%2Fg%2F11g72gwc8v!3m5!1s0x390d229ac87cfdd5:0x69e8530883d800e0!8m2!3d28.4133246!4d77.0442482!16s%2Fg%2F11g72gwc8v?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="cursor-pointer hover:scale-105 transition-transform"
-      title="Open in Google Maps"
-    >
-      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-        <Icon name="MapPin" size={24} color="white" />
-      </div>
-    </a>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <div className="flex items-center space-x-4 mb-4">
 
-    <div>
-      <h3 className="text-white font-semibold">Visit Office</h3>
-      <p className="text-white/80 text-sm">For more inquiries </p>
-    </div>
-  </div>
+                {/* Clickable Icon */}
+                <a
+                  href="https://www.google.com/maps/@40.4369499,-74.5371851,3a,75y,201.51h,90t/data=!3m7!1e1!3m5!1s-ebAemgUdW-qBO0gxCRCwg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D-ebAemgUdW-qBO0gxCRCwg%26yaw%3D201.50854!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer hover:scale-105 transition-transform"
+                  title="Open in Google Maps"
+                >
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                    <Icon name="MapPin" size={24} color="white" />
+                  </div>
+                </a>
 
-  <p className="text-white/90 text-sm">Gurugram, Haryana 122016</p>
-</div>
+                <div>
+                  <h3 className="text-white font-semibold">Visit Office</h3>
+                  <p className="text-white/80 text-sm">For more inquiries </p>
+                </div>
+              </div>
+
+              <p className="text-white/90 text-sm">New Jersey 08824</p>
+            </div>
 
           </div>
         </div>

@@ -1,3 +1,4 @@
+import ContactUs from 'components/ui/ContactUs';
 import React, { useEffect, useState } from 'react';
 
 const CARD_WIDTH = 350;
@@ -8,26 +9,22 @@ const TOTAL_SHIFT = CARD_WIDTH + GAP;
 const SuccessStories = () => {
     const stories = [
         {
-            image:
-                'https://images.unsplash.com/photo-1522071820081-009f0129c71c',
+            image:'/our1.jpg',
             title:
                 'Helping enterprises modernize legacy systems and scale operations with cloud-first strategies.'
         },
         {
-            image:
-                'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+            image:'/our4.jpg',
             title:
                 'Delivering intelligent analytics platforms enabling faster, data-driven decision making.'
         },
         {
-            image:
-                'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1',
+            image:'/our2.jfif',
             title:
                 'Driving digital transformation for financial services through secure, scalable systems.'
         },
         {
-            image:
-                'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70',
+            image:'/our3.jfif',
             title:
                 'Strengthening enterprise delivery with high-impact IT staff augmentation and managed services.'
         }
@@ -65,6 +62,7 @@ const SuccessStories = () => {
     }, [index, stories.length]);
 
     return (
+        <>
         <section className="bg-gradient-to-r from-[#0ead5b] via-[#c5b82f] to-[#0A7F8C] py-20">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-white">
@@ -119,6 +117,8 @@ const SuccessStories = () => {
                 </div>
             </div>
         </section>
+        <ContactUs/>
+        </>
     );
 };
 

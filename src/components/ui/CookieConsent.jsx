@@ -96,7 +96,7 @@ const CookieConsent = () => {
 
         {/* Intro */}
         <p className="text-xs text-gray-600 mb-4">
-          Faston uses cookies to improve your experience, analyze traffic, and
+          Fstone uses cookies to improve your experience, analyze traffic, and
           personalize content. Manage your preferences below.
         </p>
 

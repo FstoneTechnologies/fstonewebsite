@@ -23,7 +23,7 @@ const HeroSection = () => {
           {/* STATS */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-xl">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h3 className="text-3xl font-bold text-slate-900">25+</h3>
+              <h3 className="text-3xl font-bold text-slate-900">20+</h3>
               <p className="text-sm text-slate-600">
                 Years of industry experience
               </p>
@@ -46,20 +46,20 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div className="pt-6">
-  <Link to="/contact">
-    <button className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]">
-      {/* ICON */}
-      <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
-        →
-      </span>
+            <Link to="/contact">
+              <button className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]">
+                {/* ICON */}
+                <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+                  →
+                </span>
 
-      {/* TEXT */}
-      <span className="relative z-10 transition-all duration-300">
-        Reach Out to Us
-      </span>
-    </button>
-  </Link>
-</div>
+                {/* TEXT */}
+                <span className="relative z-10 transition-all duration-300">
+                  Reach Out to Us
+                </span>
+              </button>
+            </Link>
+          </div>
 
         </div>
 

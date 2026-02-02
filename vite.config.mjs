@@ -27,6 +27,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/app/", 
   build: {
     outDir: "build",
     chunkSizeWarningLimit: 2000,

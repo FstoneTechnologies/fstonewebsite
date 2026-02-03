@@ -16,14 +16,14 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-teal-600 to-blue-800 text-white">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-teal-600/60 to-blue-800/90"></div>
-      
+
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full bg-gradient-to-br from-blue-500 via-teal-400 to-blue-600"></div>
       </div>
 
       {/* Animated Background Elements */}
-      <AnimatedBackground 
+      <AnimatedBackground
         type="floating"
         count={8}
         opacity={0.15}
@@ -35,17 +35,16 @@ const HeroSection = () => {
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <LazyLoad>
-          <div className={`transition-all duration-1000 ease-out ${
-            isVisible 
-              ? 'opacity-100 translate-y-0' 
+          <div className={`transition-all duration-1000 ease-out ${isVisible
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10'
-          }`}>
-            
+            }`}>
+
             {/* Trust Badge */}
             <LazyLoad delay={200}>
-              <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-400/30 rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
-                <Shield size={16} className="text-orange-400" />
-                <span className="text-sm font-medium text-orange-300">20+ Years of Proven Expertise</span>
+              <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-white rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
+                <Shield size={16} className="text-white-400" />
+                <span className="text-sm font-medium text-white-300">20+ Years of Proven Expertise</span>
               </div>
             </LazyLoad>
 
@@ -81,21 +80,21 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <LazyLoad delay={1000}>
               <div className="flex justify-center mb-16">
-  <Link
-    to="/contact"
-    className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
-  >
-    {/* SLIDING ICON */}
-    <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
-      →
-    </span>
+                <Link
+                  to="/contact"
+                  className="group relative overflow-hidden inline-flex items-center justify-center bg-black text-white px-14 py-5 rounded-full font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg min-w-[320px]"
+                >
+                  {/* SLIDING ICON */}
+                  <span className="absolute left-4 w-9 h-9 rounded-full bg-blue-400 text-black flex items-center justify-center transition-all duration-300 group-hover:left-[calc(100%-3rem)]">
+                    →
+                  </span>
 
-    {/* TEXT */}
-    <span className="relative z-10 transition-all duration-300">
-      Start Your Journey
-    </span>
-  </Link>
-</div>
+                  {/* TEXT */}
+                  <span className="relative z-10 transition-all duration-300">
+                    Start Your Journey
+                  </span>
+                </Link>
+              </div>
 
             </LazyLoad>
           </div>

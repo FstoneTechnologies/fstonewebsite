@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
         <div className="space-y-8 text-gray-800 text-sm leading-relaxed">
           {/* Intro */}
           <p>
-            This Privacy Policy explains how <strong>Faston</strong> we collects, uses, and protects your personal
+            This Privacy Policy explains how <strong>Fstone</strong> we collects, uses, and protects your personal
             information when you visit or interact with our website.
           </p>
 
@@ -143,10 +143,10 @@ const PrivacyPolicy = () => {
               If you have any questions or concerns about this Privacy Policy or
               how we handle your data, please contact us at{" "}
               <a
-                href="mailto:info@yourcompany.com"
+                href="mailto:info@fstonetechnologies.com"
                 className="text-orange-600 underline"
               >
-                info@yourcompany.com
+                info@fstonetechnologies.com
               </a>
               .
             </p>

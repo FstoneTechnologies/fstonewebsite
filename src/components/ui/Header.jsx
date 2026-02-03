@@ -178,27 +178,6 @@ const Header = () => {
                 </Link>
               ))}
 
-              {/* Mobile CTAs */}
-              <div className="pt-4 space-y-3 border-t border-border">
-                <Button
-                  variant="outline"
-                  fullWidth
-                  iconName="Calendar"
-                  iconPosition="left"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                >
-                  Schedule Call
-                </Button>
-                <Button
-                  variant="default"
-                  fullWidth
-                  iconName="ArrowRight"
-                  iconPosition="right"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-cta"
-                >
-                  Get Started
-                </Button>
-              </div>
             </nav>
           </div>
         )}

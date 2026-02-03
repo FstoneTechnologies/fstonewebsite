@@ -7,7 +7,6 @@ import TrustIndicators from './components/TrustIndicators';
 import SuccessCarousel from './components/SuccessCarousel';
 import KnowledgeCenter from './components/KnowledgeCenter';
 import SocialProof from './components/SocialProof';
-import MobileOptimized from './components/MobileOptimized';
 import Footer from '../../components/ui/Footer';
 import LazyLoad from '../../components/LazyLoad';
 const Homepage = () => {
@@ -49,10 +48,8 @@ const Homepage = () => {
           <SocialProof />
         </LazyLoad>
         
-        {/* Mobile-Optimized Section */}
-        <LazyLoad>
-          <MobileOptimized />
-        </LazyLoad>
+        
+        
       </main>
       {/* Footer */}
      <Footer />
